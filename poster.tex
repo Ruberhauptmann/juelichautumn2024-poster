@@ -9,8 +9,11 @@
 % for landscape posters add ", landscape" to the postersize command.
 \postersize{a0paper}
 
+\renewcommand{\emph}[1]{\textbf{#1}}
+
 % authors
-\title{Superconducting phase stiffness, coherence length and depairing current from a finite momentum pairing constraint}
+%\title{Superconducting phase stiffness, coherence length and depairing current from a finite momentum pairing constraint}
+\title{Title}
 \author{Tjark Sievers}
 
 % type of poster: [exp]erimental results, [methods], [theory]
@@ -18,61 +21,60 @@
 \newcommand\postertype{theory} % [exp],[methods],[theory]
 
 \begin{document}
-
-% main point of your study
-\makefinding{\textbf{Main finding} goes here, translated into \textbf{plain English}. \textbf{Emphasize} the important words.}
-
-
-% the main text of your poster goes here
-\makemain{
-    % you can have 1 or 2 columns
-    \raggedcolumns
-    \begin{multicols}{2}
-        \section{Intro}
-        \begin{compactitem}
-            \item Just give some context
-            \item No need to cite papers
-            \item because people can download your paper
-        \end{compactitem}
-        
-        \section{Methods}
-        \begin{compactitem}
-            \item N = 30
-            \item Some math: $w_1 = \epsilon$
-            \item Collected this
-            \item Tested with X statistical test
-        \end{compactitem}
-        
-    % this determines where your columns will be separated
-    \columnbreak
-
-        \section{Results}
-        
-        \begin{compactitem}
-            \item Your
-            \item Talking
-            \item Points
-        \end{compactitem}
-    
-    \end{multicols}
-}
-% If you have extra figures or data to show
-\makeextracolumn{
-    Add your things here
-    
-    \begin{itemize}
-    \setlength\itemsep{0.1em}
-        \item Stuff you don't want to forget
-        \item But is not essential
-    \end{itemize}
-}
-
-% footer
-% generate qr code from https://www.qr-code-generator.com/ and replace qr_code.png
-% default: barcode on the left
-%\makefooter{images/uni_logo.png}{images/qr-code.png}
-
-% replace with this like for barcode on the right
-%\makealtfooter{images/uni_logo.png}{images/qr-code.png}
- 
+	
+	% main point of your study
+	\makefinding{\emph{Main finding} goes here, translated into \emph{plain English}. \emph{Emphasize} the important words.}
+	
+	
+	% the main text of your poster goes here
+	\makemain{
+		% you can have 1 or 2 columns
+		\raggedcolumns
+		\begin{multicols}{2}
+			\section*{Intro}
+			\begin{compactitem}
+				\item BCS theory
+				\item Plot to demonstrate flat bands (my system)
+				\item Puzzling question: flat bands mean no transport in normal state, \emph{where does the transport in the SC state come from?}
+			\end{compactitem}
+			
+			\section*{The System}
+			\begin{compactitem}
+				\item Lattice geometry and Hamiltonian (maybe?)
+				\item Why is the system interesting?
+			\end{compactitem}
+			
+			% this determines where your columns will be separated
+			\columnbreak
+			
+			\section*{Results}
+			
+			\begin{compactitem}
+				\item Gap size linear against interaction, switches between
+			\end{compactitem}
+			
+			\section*{Next Steps}
+			
+		\end{multicols}
+	}
+	% If you have extra figures or data to show
+	\makeextracolumn{
+		Add your things here
+		
+		\begin{itemize}
+			\setlength\itemsep{0.1em}
+			\item Stuff you don't want to forget
+			\item But is not essential
+		\end{itemize}
+	}
+	
+	% footer
+	% generate qr code from https://www.qr-code-generator.com/ and replace qr_code.png
+	% default: barcode on the left
+	%\makefooter{images/uni_logo.png}{images/qr-code.png}
+	\makefooter{images/logos/up-uhh-logo-u-2010-u-farbe-u-cmyk-eps-converted-to.pdf}{images/logos/up-uhh-logo-u-2010-u-farbe-u-cmyk-eps-converted-to.pdf}
+	
+	% replace with this like for barcode on the right
+	%\makealtfooter{images/uni_logo.png}{images/qr-code.png}
+	
 \end{document}
